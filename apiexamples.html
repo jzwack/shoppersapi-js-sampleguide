@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<title>Digital River API Test</title>
+<style type="text/css">
+#mainContent {
+	position: relative;
+}
+#buttons {
+	position: absolute;
+	left: 0px;
+	width: 200px;
+}
+.results {
+	position: absolute;
+	margin-top: 300px;
+}
+td {
+	padding-right: 10px;
+}
+#apiCall {
+	margin-left: 200px;
+}
+body {
+	margin-bottom: 120px;
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="mainContent">
+<div id="buttons">
+<form name="enterApiKey">
+	API Key: <input type="text" id="apiKey"> Site ID: <input type="text" id="siteID">
+	<input type="button" value="Submit" onClick="updateApiKey()"></br>
+</form>
+<input type="button" value="Get Token" id="getToken" onClick="getAnonToken()"></br>
+<input type="button" value="Get Products" id="getProducts" onClick="getProducts()"></br>
+<form name="productId">
+    ProductID to Add to Cart: <input type="text" name="addProductId">
+    <input type="button" value="Add Product to Cart" onClick="addToCart(addProductId.value)"></br>
+</form>
+<input type="button" value="Get Current Cart" id="getCart" onClick="getCurrentCart()"></br>
+<input type="button" value="Checkout" id="checkout" onClick="checkout()"></br>
+</div>
+</div>
+<div class="results">
+</div>
+<div id="apiCall">
+</div>
+<div>
+
+
+</body>
+</html>
